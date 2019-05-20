@@ -53,6 +53,7 @@ a {
 
 .latest-art img {
     max-width: 20%;
+    height: 100%;
     height: auto;
     float: left;
 }
