@@ -4,9 +4,14 @@ header {
     /* overflow: auto; */
 }
 
+a {
+    color: white;
+}
+
 .section-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 5em;
     grid-row-gap: 0.5em;
     margin-bottom: 0.5em;
 }
@@ -16,9 +21,24 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    height: 7em;
     background: green;
     border: 2px solid red;
+    color: white;
+    font-size: 1em;
+}
+
+.first-art {
+    background-image: url(../images/Moonday-morning-cryptocurrency-vaporwave-blockchain-news-796x448.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.second-art {
+    background-image: url(../images/wallie-bitcoin-wallet-cryptocurrency-blockchain-abn-amro-marketing-ehtereum-denied-796x448.png);
+}
+
+.third-art {
+    background-image: url(../images/Moonday-morning-cryptocurrency-vaporwave-blockchain-news-796x448.jpg);
 }
 
 .latest-news {
@@ -28,8 +48,13 @@ header {
 .latest-art {
     grid-column: 1 / -1;
     background: yellow;
-    height: 5em;
     border: 2px solid black;
+}
+
+.latest-art img {
+    max-width: 20%;
+    height: auto;
+    float: left;
 }
 
 .funding-news {
@@ -38,7 +63,6 @@ header {
 
 .funding-header, .funding-art {
     grid-column: 1 / -1;
-    height: 10em;
     background: red;
     border: 2px solid purple;
 }
@@ -49,12 +73,26 @@ header {
 
 .categories-art {
     grid-column: 1 / -1;
-    height: 5em;
     background: grey;
 }
 
 .deals-art {
     grid-column: 1 / -1;
-    height: 5em;
     background: blueviolet;
+}
+
+@media only screen and (min-width:768px) {
+    .main-art {
+        grid-column: 9 / -1;
+    }
+
+    .first-art {
+        grid-column: 1 / span 8;
+        grid-row: 1 / span 2;
+    }
+
+    .latest-art {
+        grid-column: auto / span 4;
+    }
+    
 }
