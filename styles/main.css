@@ -5,18 +5,29 @@ header {
 }
 
 a {
-    color: white;
+    color: inherit;
+    text-decoration: none;
 }
 
 .section-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 5em;
-    grid-row-gap: 0.5em;
-    margin-bottom: 0.5em;
+    /* grid-auto-rows: fit-content(5em, max-content); */
+    grid-row-gap: 1em;
+    grid-column-gap: 0.5em;
+    margin: 0.5em;
 }
 
-.main-art {
+.section-heading {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.featured-container {
+    grid-auto-rows: minmax(10em, auto);
+}
+
+.featured-art {
     grid-column: 1 / -1;
     display: flex;
     flex-direction: column;
@@ -27,6 +38,22 @@ a {
     font-size: 1em;
 }
 
+@media only screen and (min-width:768px) {
+    .featured-art {
+        grid-column: 9 / -1;
+    }
+
+    .first-art {
+        grid-column: 1 / span 8;
+        grid-row: 1 / span 2;
+    }
+
+    .latest-art {
+        grid-column: auto / span 4;
+    }
+    
+}
+
 .first-art {
     background-image: url(../images/Moonday-morning-cryptocurrency-vaporwave-blockchain-news-796x448.jpg);
     background-size: cover;
@@ -35,13 +62,17 @@ a {
 
 .second-art {
     background-image: url(../images/wallie-bitcoin-wallet-cryptocurrency-blockchain-abn-amro-marketing-ehtereum-denied-796x448.png);
+    background-size: cover;
+    background-position: bottom;
 }
 
 .third-art {
     background-image: url(../images/Moonday-morning-cryptocurrency-vaporwave-blockchain-news-796x448.jpg);
+    background-size: cover;
+    background-position: bottom;
 }
 
-.latest-news {
+.latest-container {
    background: palegreen;
 }
 
@@ -57,23 +88,113 @@ a {
     float: left;
 }
 
-.funding-news {
-    background: wheat;
+.funding-container {
+    /* background: wheat; */
+    /* grid-auto-rows: minmax(10em, auto); */
 }
 
-.funding-header, .funding-art {
+.funding-header{
     grid-column: 1 / -1;
-    background: red;
-    border: 2px solid purple;
+    color: #ef472b;
+}
+
+.funding-header ul {
+    font-size: 1.2em;
+}
+
+.funding-art > div:nth-child(n + 2) {
+    background-color: #fefaf8;
+    
+}
+
+.funding-art > div:nth-child(2) {
+    border-bottom: 0.5px solid #ef472b;
+}
+
+.funding-art-header div:first-of-type {
+    background-color: #ef472b;
+    padding-left: 6em;
+}
+
+.funding-art-header div:last-of-type {
+    background-color: #fce8e7;
+    padding-left: 6em;
+}
+
+.funding-art-header img {
+    width: 4em;
+    height: auto;
+    float: left;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.funding-art p {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.funding-art > div:nth-child(n + 2) p {
+    padding-left: 3em;
+}
+
+.funding-header .section-heading, 
+.funding-header ul,
+.funding-header li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.funding-art {
+    grid-column: 1 / -1;
+}
+
+@media screen and (min-width: 768px) {
+    .funding-art {
+        grid-column: auto / span 4;
+    }
+
+    .funding-header li {
+        display: inline;
+        padding-right: 1em;
+    }
+
+    .funding-header li:nth-of-type(n + 2) {
+        border-left: 1px solid #ef472b;
+        padding-left: 1em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .funding-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .funding-header ul,
+    .funding-header li,
+    .funding-header .section-heading {
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .funding-header ul {
+        align-self: end;
+        justify-self: end;
+    }
 }
 
 .categories {
     background: brown;
 }
 
-.categories-art {
-    grid-column: 1 / -1;
-    background: grey;
+.category {
+    background: rgb(204, 141, 23);
 }
 
 .deals-art {
@@ -81,18 +202,3 @@ a {
     background: blueviolet;
 }
 
-@media only screen and (min-width:768px) {
-    .main-art {
-        grid-column: 9 / -1;
-    }
-
-    .first-art {
-        grid-column: 1 / span 8;
-        grid-row: 1 / span 2;
-    }
-
-    .latest-art {
-        grid-column: auto / span 4;
-    }
-    
-}
