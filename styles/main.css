@@ -1,0 +1,60 @@
+header {
+    height: 2em;
+    background: blue;
+    /* overflow: auto; */
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.main-art {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 7em;
+    background: green;
+    border: 2px solid red;
+}
+
+.latest-news {
+   background: palegreen;
+}
+
+.latest-art {
+    grid-column: 1 / -1;
+    background: yellow;
+    height: 5em;
+    border: 2px solid black;
+}
+
+.funding-news {
+    background: wheat;
+}
+
+.funding-header, .funding-art {
+    grid-column: 1 / -1;
+    height: 10em;
+    background: red;
+    border: 2px solid purple;
+}
+
+.categories {
+    background: brown;
+}
+
+.categories-art {
+    grid-column: 1 / -1;
+    height: 5em;
+    background: grey;
+}
+
+.deals-art {
+    grid-column: 1 / -1;
+    height: 5em;
+    background: blueviolet;
+}
