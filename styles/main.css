@@ -88,14 +88,20 @@ a {
     float: left;
 }
 
+/*
+--------------------------------------------------------
+Funding Section
+--------------------------------------------------------
+*/
+
 .funding-container {
     /* background: wheat; */
     /* grid-auto-rows: minmax(10em, auto); */
 }
 
 .funding-header{
-    grid-column: 1 / -1;
     color: #ef472b;
+    grid-column: 1 / -1;
 }
 
 .funding-header ul {
@@ -122,16 +128,16 @@ a {
 }
 
 .funding-art-header img {
-    width: 4em;
-    height: auto;
     float: left;
+    height: auto;
     margin-left: 1em;
     margin-top: 1em;
+    width: 4em;
 }
 
 .funding-art p {
-    padding-top: 1em;
     padding-bottom: 1em;
+    padding-top: 1em;
 }
 
 .funding-art > div:nth-child(n + 2) p {
@@ -141,8 +147,8 @@ a {
 .funding-header .section-heading, 
 .funding-header ul,
 .funding-header li {
-    margin-top: 0.5em;
     margin-bottom: 0.5em;
+    margin-top: 0.5em;
 }
 
 .funding-art {
@@ -170,8 +176,8 @@ a {
     .funding-header {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding-top: 1em;
         padding-bottom: 1em;
+        padding-top: 1em;
     }
 
     .funding-header ul,
@@ -188,6 +194,12 @@ a {
         justify-self: end;
     }
 }
+
+/*
+--------------------------------------------------------
+End of Funding Section
+--------------------------------------------------------
+*/
 
 .categories {
     background: brown;
