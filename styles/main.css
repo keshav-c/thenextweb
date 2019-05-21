@@ -21,7 +21,18 @@ a {
 .section-heading {
     font-size: 2em;
     font-weight: 700;
+    /*common?*/
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    grid-column: 1 / -1;
+    color: #ef472b;
 }
+
+/* .right-angle-br {
+    display: inline-block;
+    width: 2em;
+
+} */
 
 .featured-container {
     grid-auto-rows: minmax(10em, auto);
@@ -47,11 +58,6 @@ a {
         grid-column: 1 / span 8;
         grid-row: 1 / span 2;
     }
-
-    .latest-art {
-        grid-column: auto / span 4;
-    }
-    
 }
 
 .first-art {
@@ -72,14 +78,21 @@ a {
     background-position: bottom;
 }
 
+/*
+-----------------------------------------------------
+Styles for Latest news
+-----------------------------------------------------
+*/
+
 .latest-container {
-   background: palegreen;
+   /* background: palegreen; */
+   padding: 0.5em;
 }
 
 .latest-art {
     grid-column: 1 / -1;
-    background: yellow;
-    border: 2px solid black;
+    /* background: yellow; */
+    
 }
 
 .latest-art img {
@@ -87,6 +100,43 @@ a {
     min-height: 100%;
     height: auto;
     float: left;
+}
+
+.item-heading {
+    font-size: 1em;
+    font-weight: 700;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    /* border: 2px solid palevioletred; */
+}
+
+.latest-art small {
+    color: grey;
+}
+
+@media screen and (min-width:768px) {
+    .latest-art {
+        grid-column: auto / span 4;
+    }
+
+    .latest-art img {
+        float: none;
+        max-width: 100%;
+        /* height: auto; */
+    }
+
+    .item-heading {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .latest-art {
+        grid-column: auto / span 3;
+    }
+
 }
 
 /*
@@ -145,7 +195,7 @@ Funding Section
     padding-left: 3em;
 }
 
-.funding-header .section-heading, 
+/* .funding-header .section-heading,  */
 .funding-header ul,
 .funding-header li {
     margin-bottom: 0.5em;
@@ -198,7 +248,7 @@ Funding Section
 
 /*
 --------------------------------------------------------
-End of Funding Section
+Categories Section
 --------------------------------------------------------
 */
 
@@ -210,8 +260,48 @@ End of Funding Section
     background: rgb(204, 141, 23);
 }
 
-.deals-art {
+/*
+--------------------------------------------------------
+Deals Section
+--------------------------------------------------------
+*/
+
+.deals-container {
+    padding: 0.5em;
+ }
+
+.deals-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-column: 1 / -1;
-    background: blueviolet;
 }
 
+.deals-header .section-heading {
+    margin-top: 0;
+    margin-bottom: 0;
+    grid-column: 1 / span 6;
+}
+
+.deals-header > p {
+    grid-column: 7 / span 6;
+    align-self: end;
+    justify-self: end;
+    color: #ef472b;
+}
+
+.deals-art {
+    grid-column: 1 / -1;
+    /* background: blueviolet; */
+}
+
+.deals-container span:first-of-type {
+    margin-right: 1em;
+    text-decoration: line-through;
+    color: grey;  
+}
+
+.deals-container span:last-of-type {
+    font-weight: 500;
+}
+
+/* .item-heading */
