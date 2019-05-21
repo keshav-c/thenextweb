@@ -35,7 +35,7 @@ a {
 } */
 
 .featured-container {
-    grid-auto-rows: minmax(10em, auto);
+    grid-auto-rows: minmax(13em, auto);
 }
 
 .featured-art {
@@ -43,10 +43,32 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    background: green;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     color: white;
     font-size: 1em;
+    padding-left: 1em;
+}
+
+.featured-art small {
+    font-size: 0.8em;
+    font-weight: 600;
+    /* border: 1px solid red; */
+    margin-bottom: 0.5em;
+}
+
+.featured-art .featured-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    /* border: 1px solid blue; */
+    margin-bottom: 0.5em;
+}
+
+.featured-art p {
+    font-size: 1em;
+    color: grey;
+    font-weight: 300;
+    /* border: 1px solid yellow; */
+    margin-bottom: 0.5em;
 }
 
 @media only screen and (min-width:768px) {
@@ -58,6 +80,11 @@ a {
         grid-column: 1 / span 8;
         grid-row: 1 / span 2;
     }
+
+    .second-art .featured-title,
+    .third-art .featured-title {
+        font-size: 1em;
+    } 
 }
 
 .first-art {
@@ -253,12 +280,83 @@ Categories Section
 */
 
 .categories {
-    background: brown;
+    /* background: brown; */
 }
 
 .category {
-    background: rgb(204, 141, 23);
+    /* background: rgb(204, 141, 23); */
+    grid-column: 1 / -1;
 }
+
+.category .featured-art {
+    height: 20em;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.category-latest{
+    background: rgb(255, 227, 232);
+    color: red;
+    padding-left: 1em;
+    margin-top: 0.5em;
+    overflow: auto;
+}
+
+.category-latest img {
+    max-width: 25%;
+    float: right;
+}
+
+.category-latest small {
+    font-size: 0.8em;
+}
+
+.category-latest .latest-title {
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.category ul {
+    clear: right;
+    list-style: disc outside;
+    color: red;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.category li a {
+    color: black;
+}
+
+.apps, .tech, .podium, .launch {
+    background-image: url(../images/latest-news.jpeg);
+}
+
+.gear, .creative, .insights, .distract {
+    background-image: url(../images/wallie-bitcoin-wallet-cryptocurrency-blockchain-abn-amro-marketing-ehtereum-denied-796x448.png)
+}
+
+
+@media screen and (min-width: 768px) {
+    .category {
+        grid-column: auto / span 6;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .category {
+        grid-column: auto / span 4;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 /*
 --------------------------------------------------------
