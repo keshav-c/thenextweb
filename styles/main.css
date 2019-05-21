@@ -1,8 +1,8 @@
-header {
-    height: 2em;
-    background: blue;
-    /* overflow: auto; */
-}
+/*
+----------------------------------------------------------
+Common styles
+----------------------------------------------------------
+*/
 
 a {
     color: inherit;
@@ -28,13 +28,69 @@ a {
     color: #ef472b;
 }
 
+/*
+----------------------------------------------------------
+Header
+----------------------------------------------------------
+*/
+
+header {
+    width: 100%;
+    overflow: auto;
+    border-bottom: 1px dashed black;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    height: 3em;
+}
+
+.logo {
+    float: left;
+    background-color: #ef472b;
+    width: 15%;
+}
+
+.logo img {
+    max-width: 75%;
+    margin: 0.5em 1em;
+}
+
+.search {
+    float: right;
+    height: 100%;
+    width: 8%;
+}
+
+.menu {
+    float: right;
+    height: 100%;
+    width: 8%;
+    color: #ef472b;
+}
+
+header button {
+    /* font-size:200%; */
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #ddd; 
+}
+
 /* .right-angle-br {
     display: inline-block;
     width: 2em;
 
 } */
 
+/*
+----------------------------------------------------------
+Featured Section
+----------------------------------------------------------
+*/
+
 .featured-container {
+    padding-top: 3em;
     grid-auto-rows: minmax(13em, auto);
 }
 
@@ -46,7 +102,6 @@ a {
     color: white;
     font-size: 1em;
     padding-left: 1em;
-    /* background: linear-gradient(#ccc, #555); */
 }
 
 .featured-art small {
@@ -63,7 +118,7 @@ a {
 
 .featured-art p {
     font-size: 1em;
-    color: grey;
+    /* color: grey; */
     font-weight: 300;
     margin-bottom: 0.5em;
 }
@@ -431,3 +486,5 @@ footer li {
     text-align: center;
     padding: 3em 0;
 }
+
+
