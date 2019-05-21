@@ -112,19 +112,15 @@ Styles for Latest news
 */
 
 .latest-container {
-   /* background: palegreen; */
    padding: 0.5em;
 }
 
 .latest-art {
-    grid-column: 1 / -1;
-    /* background: yellow; */
-    
+    grid-column: 1 / -1;   
 }
 
 .latest-art img {
     max-width: 20%;
-    min-height: 100%;
     height: auto;
     float: left;
 }
@@ -284,7 +280,6 @@ Categories Section
 }
 
 .category {
-    /* background: rgb(204, 141, 23); */
     grid-column: 1 / -1;
 }
 
@@ -389,7 +384,6 @@ Deals Section
 
 .deals-art {
     grid-column: 1 / -1;
-    /* background: blueviolet; */
 }
 
 .deals-container span:first-of-type {
@@ -402,4 +396,32 @@ Deals Section
     font-weight: 500;
 }
 
-/* .item-heading */
+/* STYLING FOR FOOTER */
+
+footer {
+    margin-top: 2em;
+    color: white;
+}
+
+footer ul {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.8em;
+}
+
+footer li {
+    display: inline;
+    padding: 1em;
+}
+
+.footer-top {
+    background-color: #131313;
+    padding: 2em 0;
+}
+
+.footer-bottom {
+    background-color: black;
+    text-align: center;
+    padding: 3em 0;
+}
