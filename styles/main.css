@@ -121,6 +121,17 @@ header nav {
         margin-top: 33%;
     }
 }
+
+@media screen and (min-width: 1024px){
+    .logo {
+        display: none;
+        /* visibility: hidden; */
+    }
+
+    header nav {
+        padding-left: 0;
+    }
+}
 /*
 ----------------------------------------------------------
 Featured Section
