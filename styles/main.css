@@ -178,19 +178,25 @@ Featured Section
 }
 
 .first-art {
-    background-image: url(../images/Moonday-morning-cryptocurrency-vaporwave-blockchain-news-796x448.jpg);
+    background-image: 
+    linear-gradient(to bottom, rgba(14, 11, 11, 0.2), rgba(7, 5, 5, 0.9)),
+    url(../images/Moonday-morning-cryptocurrency-vaporwave-blockchain-news-796x448.jpg);
     background-size: cover;
     background-position: bottom;
 }
 
 .second-art {
-    background-image: url(../images/wallie-bitcoin-wallet-cryptocurrency-blockchain-abn-amro-marketing-ehtereum-denied-796x448.png);
+    background-image: 
+    linear-gradient(to bottom, rgba(14, 11, 11, 0.2), rgba(7, 5, 5, 0.9)),
+    url(../images/wallie-bitcoin-wallet-cryptocurrency-blockchain-abn-amro-marketing-ehtereum-denied-796x448.png);
     background-size: cover;
     background-position: bottom;
 }
 
 .third-art {
-    background-image: url(../images/Moonday-morning-cryptocurrency-vaporwave-blockchain-news-796x448.jpg);
+    background-image: 
+    linear-gradient(to bottom, rgba(14, 11, 11, 0.2), rgba(7, 5, 5, 0.9)),
+    url(../images/Moonday-morning-cryptocurrency-vaporwave-blockchain-news-796x448.jpg);
     background-size: cover;
     background-position: bottom;
 }
@@ -416,10 +422,9 @@ Categories Section
     float: right;
 }
 
-.category-latest small {
+.category-latest p {
+    margin-top: 1em;
     font-size: 0.8em;
-    /* padding-top: 0.5em; */
-    border: 1px solid green;
 }
 
 .category-latest .latest-title {
@@ -440,11 +445,15 @@ Categories Section
 }
 
 .apps, .tech, .podium, .launch {
-    background-image: url(../images/latest-news.jpeg);
+    background-image: 
+    linear-gradient(to bottom, rgba(14, 11, 11, 0.2), rgba(7, 5, 5, 0.9)),
+    url(../images/latest-news.jpeg);
 }
 
 .gear, .creative, .insights, .distract {
-    background-image: url(../images/wallie-bitcoin-wallet-cryptocurrency-blockchain-abn-amro-marketing-ehtereum-denied-796x448.png)
+    background-image: 
+    linear-gradient(to bottom, rgba(14, 11, 11, 0.2), rgba(7, 5, 5, 0.9)),
+    url(../images/wallie-bitcoin-wallet-cryptocurrency-blockchain-abn-amro-marketing-ehtereum-denied-796x448.png)
 }
 
 
