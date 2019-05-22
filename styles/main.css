@@ -15,7 +15,7 @@ a {
     /* grid-auto-rows: fit-content(5em, max-content); */
     grid-row-gap: 1em;
     grid-column-gap: 0.5em;
-    margin: 0.5em;
+    margin: 0 0.5em 0.5em 0.5em;
 }
 
 .section-heading {
@@ -37,39 +37,40 @@ Header
 header {
     width: 100%;
     overflow: auto;
-    border-bottom: 1px dashed black;
+    border-bottom: 1px solid grey;
     position: fixed;
     top: 0;
     background-color: white;
-    height: 3em;
+    height: 4em;
 }
 
 .logo {
     float: left;
     background-color: #ef472b;
-    width: 15%;
+    width: calc(20px + 2em * 4.125);
+    height: 100%
 }
 
 .logo img {
-    max-width: 75%;
-    margin: 0.5em 1em;
+    /* max-height: 90%; */
+    margin: 10px;
+    height: 2em;
 }
 
+.search, .menu {
+    height: 100%;
+    width: 5em;
+}
 .search {
     float: right;
-    height: 100%;
-    width: 8%;
 }
 
 .menu {
     float: right;
-    height: 100%;
-    width: 8%;
-    color: #ef472b;
 }
 
 header button {
-    /* font-size:200%; */
+    font-size:1.5em;
     width: 100%;
     height: 100%;
     cursor: pointer;
@@ -77,12 +78,49 @@ header button {
     border: 1px solid #ddd; 
 }
 
-/* .right-angle-br {
-    display: inline-block;
-    width: 2em;
+header nav {
+    display: none;
+}
 
-} */
+@media screen and (min-width: 768px) {
+    header nav {
+        display: block;
+        padding-left: 10em;
+        font-size: 0.8em;
+    } 
+    
+    .menu {
+        display: none;
+    }
+    
+    header ul {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
 
+    header li {
+        display: inline;
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+    }
+
+    .top-nav {
+        height: 40%;
+        background: black;
+        color: white;
+    }
+
+    .bottom-nav {
+        height: 60%;
+        color: grey;
+        font-size: 1.2em;
+    }
+
+    header button {
+        height: 60%;
+        margin-top: 33%;
+    }
+}
 /*
 ----------------------------------------------------------
 Featured Section
@@ -164,8 +202,20 @@ content container, excluding featured content
 */
 
 .content-container {
-    width: 66.66666%;
     margin: 0.5em auto;
+    width: 98%;
+}
+
+@media screen and (min-width: 1280px) {
+    .content-container {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .content-container {
+        width: 66.66666%;
+    }
 }
 
 /*
