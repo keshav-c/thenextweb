@@ -1,5 +1,60 @@
 /*
 ----------------------------------------------------------
+CSS Reset
+----------------------------------------------------------
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*
+----------------------------------------------------------
 Common styles
 ----------------------------------------------------------
 */
@@ -19,7 +74,7 @@ a {
 
 .section-heading {
     color: #ef472b;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 700;
     grid-column: 1 / -1;
     margin-bottom: 0.5em;
@@ -35,7 +90,7 @@ Header
 header {
     background-color: white;
     border-bottom: 1px solid grey;
-    height: 4em;
+    height: 3em;
     overflow: auto;
     position: fixed;
     top: 0;
@@ -81,6 +136,10 @@ header nav {
 }
 
 @media screen and (min-width: 768px) {
+    header {
+        height: 4.5em;
+    }
+
     header nav {
         display: block;
         font-size: 0.8em;
@@ -93,7 +152,7 @@ header nav {
     
     header ul {
         padding-bottom: 0.5em;
-        padding-top: 0.5em;
+        padding-top: 1em;
     }
 
     header li {
@@ -105,18 +164,18 @@ header nav {
     .top-nav {
         background: black;
         color: white;
-        height: 40%;   
+        height: 40%;
     }
 
     .bottom-nav {
         color: grey;
-        font-size: 1.2em;
+        font-size: 1.1em;
         height: 60%;
     }
 
     header button {
         height: 60%;
-        margin-top: 33%;
+        margin-top: 40%;
     }
 }
 
@@ -169,6 +228,10 @@ Featured Section
 }
 
 @media only screen and (min-width:768px) {
+    .featured-container {
+        margin-top: 1.7em;
+    }
+
     .featured-art {
         grid-column: 9 / -1;
     }
@@ -251,7 +314,9 @@ Styles for Latest news
 */
 
 .latest-container {
-   padding: 0.5em;
+    column-gap: 1em;
+    padding: 0.5em;
+    row-gap: 1.5em;
 }
 
 .latest-art {
@@ -261,18 +326,21 @@ Styles for Latest news
 .latest-art img {
     float: left;
     height: auto;
-    max-width: 20%;
+    margin-right: 0.8em;
+    max-width: 15%;
 }
 
 .item-heading {
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: 700;
+    line-height: 1em;
     margin-bottom: 0.2em;
     margin-top: 0.2em;
 }
 
 .latest-art small {
     color: grey;
+    font-size: 0.8em;
 }
 
 @media screen and (min-width:768px) {
@@ -286,6 +354,7 @@ Styles for Latest news
     }
 
     .item-heading {
+        font-size: 0.9em;
         margin-bottom: 0.5em;
         margin-top: 0.5em;
     }
@@ -295,6 +364,10 @@ Styles for Latest news
 @media screen and (min-width: 1024px) {
     .latest-art {
         grid-column: auto / span 3;
+    }
+
+    .item-heading {
+        font-size: 1em;
     }
 }
 
