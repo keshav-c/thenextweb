@@ -74,7 +74,7 @@ a {
 
 .section-heading {
     color: #ef472b;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 700;
     grid-column: 1 / -1;
     margin-bottom: 0.5em;
@@ -90,7 +90,7 @@ Header
 header {
     background-color: white;
     border-bottom: 1px solid grey;
-    height: 4em;
+    height: 3em;
     overflow: auto;
     position: fixed;
     top: 0;
@@ -136,6 +136,10 @@ header nav {
 }
 
 @media screen and (min-width: 768px) {
+    header {
+        height: 4.5em;
+    }
+
     header nav {
         display: block;
         font-size: 0.8em;
@@ -148,7 +152,7 @@ header nav {
     
     header ul {
         padding-bottom: 0.5em;
-        padding-top: 0.5em;
+        padding-top: 1em;
     }
 
     header li {
@@ -165,13 +169,13 @@ header nav {
 
     .bottom-nav {
         color: grey;
-        font-size: 1.2em;
+        font-size: 1.1em;
         height: 60%;
     }
 
     header button {
         height: 60%;
-        margin-top: 33%;
+        margin-top: 40%;
     }
 }
 
@@ -224,6 +228,10 @@ Featured Section
 }
 
 @media only screen and (min-width:768px) {
+    .featured-container {
+        margin-top: 1.7em;
+    }
+
     .featured-art {
         grid-column: 9 / -1;
     }
